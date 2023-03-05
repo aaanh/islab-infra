@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: islab-service
+spec:
+    selector:
+        app: islab-test-wiki
+    ports:
+        - port: 80
+          targetPort: 8080
+    type: LoadBalancer
